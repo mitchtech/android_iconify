@@ -26,27 +26,28 @@ if file.endswith('.png'):
 	os.mkdir(newdir)
 	newdir = ('./res/drawable-hdpi')
 	os.mkdir(newdir)
+	newdir = ('./res/drawable-xhdpi')
+	os.mkdir(newdir)
 	# drawable-ldpi
 	new = ('./res/drawable-ldpi/ic_launcher_' + file)
 	os.system ("convert %s -resize 36x36 %s" % (file, new))
 	new = ('./res/drawable-ldpi/ic_stat_notify_' + file)
-	os.system ("convert %s -resize 19x19 %s" % (file, new))
-	new = ('./res/drawable-ldpi/ic_dialog_' + file)
-	os.system ("convert %s -resize 24x24 %s" % (file, new))
+	os.system ("convert %s -resize 18x18 %s" % (file, new))
 	# drawable-mdpi
 	new = ('./res/drawable-mdpi/ic_launcher_' + file)
 	os.system ("convert %s -resize 48x48 %s" % (file, new))
 	new = ('./res/drawable-mdpi/ic_stat_notify_' + file)
-	os.system ("convert %s -resize 25x25 %s" % (file, new))
-	new = ('./res/drawable-mdpi/ic_dialog_' + file)
 	os.system ("convert %s -resize 24x24 %s" % (file, new))
 	# drawable-hdpi
 	new = ('./res/drawable-hdpi/ic_launcher_' + file)
-	os.system ("convert %s -resize 36x36 %s" % (file, new))
+	os.system ("convert %s -resize 72x72 %s" % (file, new))
 	new = ('./res/drawable-hdpi/ic_stat_notify_' + file)
-	os.system ("convert %s -resize 19x19 %s" % (file, new))
-	new = ('./res/drawable-hdpi/ic_dialog_' + file)
-	os.system ("convert %s -resize 24x24 %s" % (file, new))
+	os.system ("convert %s -resize 36x36 %s" % (file, new))
+	# drawable-xhdpi
+	new = ('./res/drawable-xhdpi/ic_launcher_' + file)
+	os.system ("convert %s -resize 96x96 %s" % (file, new))
+	new = ('./res/drawable-xhdpi/ic_stat_notify_' + file)
+	os.system ("convert %s -resize 48x48 %s" % (file, new))
 	
 print "Complete"
 
