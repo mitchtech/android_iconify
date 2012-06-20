@@ -19,15 +19,20 @@ file = sys.argv[1]
 if file.endswith('.png'):
 	# create directory structure
 	newdir = ('./res')
-	os.mkdir(newdir)
+	if not os.path.exists(newdir):
+		os.mkdir(newdir)
 	newdir = ('./res/drawable-ldpi')
-	os.mkdir(newdir)
+	if not os.path.exists(newdir):
+		os.mkdir(newdir)
 	newdir = ('./res/drawable-mdpi')
-	os.mkdir(newdir)
+	if not os.path.exists(newdir):
+		os.mkdir(newdir)
 	newdir = ('./res/drawable-hdpi')
-	os.mkdir(newdir)
+	if not os.path.exists(newdir):
+		os.mkdir(newdir)
 	newdir = ('./res/drawable-xhdpi')
-	os.mkdir(newdir)
+	if not os.path.exists(newdir):
+		os.mkdir(newdir)
 	# drawable-ldpi
 	new = ('./res/drawable-ldpi/ic_launcher_' + file)
 	os.system ("convert %s -resize 36x36 %s" % (file, new))
