@@ -33,6 +33,9 @@ if file.endswith('.png'):
 	newdir = ('./res/drawable-xhdpi')
 	if not os.path.exists(newdir):
 		os.mkdir(newdir)
+	newdir = ('./res/drawable-xxhdpi')
+	if not os.path.exists(newdir):
+		os.mkdir(newdir)
 	# drawable-ldpi
 	new = ('./res/drawable-ldpi/ic_launcher_' + file)
 	os.system ("convert %s -resize 36x36 %s" % (file, new))
@@ -52,7 +55,12 @@ if file.endswith('.png'):
 	new = ('./res/drawable-xhdpi/ic_launcher_' + file)
 	os.system ("convert %s -resize 96x96 %s" % (file, new))
 	new = ('./res/drawable-xhdpi/ic_stat_notify_' + file)
-	os.system ("convert %s -resize 48x48 %s" % (file, new))
+	os.system ("convert %s -resize 48x48 %s" % (file, new))	
+	# drawable-xxhdpi
+	new = ('./res/drawable-xxhdpi/ic_launcher_' + file)
+	os.system ("convert %s -resize 144x144 %s" % (file, new))
+	new = ('./res/drawable-xxhdpi/ic_stat_notify_' + file)
+	os.system ("convert %s -resize 64x64 %s" % (file, new))
 	
 print "Complete"
 
